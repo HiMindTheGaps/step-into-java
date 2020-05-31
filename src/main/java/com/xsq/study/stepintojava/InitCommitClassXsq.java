@@ -13,5 +13,6 @@ public class InitCommitClassXsq {
 
     public static void main(String[] args) {
         System.out.println("hello xsq");
+        System.out.println("hhhhh");
     }
 }
