@@ -23,6 +23,7 @@ public class SocketHandler implements Runnable {
         this.socket = socket;
     }
 
+    @Override
     public void run() {
         while ((!Thread.currentThread().isInterrupted()) && (!socket.isClosed())) {
             try {
