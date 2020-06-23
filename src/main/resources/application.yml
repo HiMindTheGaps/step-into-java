@@ -1,2 +1,6 @@
 server:
   port: 8899
+
+admin.user:
+  id: 5
+  name: hwww

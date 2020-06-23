@@ -7,6 +7,7 @@
 package com.lhw.study.springboot.ctrl;
 
 import com.lhw.study.springboot.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,9 +23,11 @@ import java.util.Date;
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class MyController {
 
+    @Autowired
+    private User adminUser;
+
     @GetMapping(value = "/user")
     public User getUser() {
-        User user = new User(3, new Date(), "hw");
-        return user;
+        return adminUser;
     }
 }
